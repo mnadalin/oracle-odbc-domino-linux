@@ -139,6 +139,14 @@ ln -s /usr/lib64/libodbc.so.2 /usr/lib64/libodbc.so
 
 System ODBC library is not found. Might be an `LD_LIBRARY_PATH` issue or a `libodbc.so` not found (hard-link as described above). Use `dctest` to troubleshoot.
 
+### Test ODBC connection from the command line
+
+Run as `notes` user:
+
+```bash
+isql -v DSNNAME USER PASS
+```
+
 ### Notes
 
 - Ensure the notes user has access to the environment variables and library paths at runtime.
